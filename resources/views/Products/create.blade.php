@@ -1,5 +1,5 @@
-@extends('products.index')
-@section('product_create')
+@extends('layout.master')
+@section('content')
     <div class="col-md-6">
     	<form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">
 		@csrf
