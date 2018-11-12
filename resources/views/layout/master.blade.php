@@ -46,15 +46,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{url('products/create')}}">
+                <a class="nav-link" href="#">
                   <span data-feather="shopping-cart"></span>
                   Products
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{url('products/show')}}">
+                <a class="nav-link" href="#">
                   <span data-feather="users"></span>
-                  View Products
+                  Customers
                 </a>
               </li>
               <li class="nav-item">
@@ -123,48 +123,8 @@
           
           <!--  -->
           
-         @yield('product_create')
-
-          <div class="col-md-12">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Product's Name</th>
-                            <th>Product's Brand</th>
-                            <th>Product's Quantity</th>
-                            <th>Product's Unit</th>
-                            <th>Product's Unit Cost</th>
-                            <th>Product's Image</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @if($products->count() > 0)
-                          @foreach($products as $product)
-                          <tr>
-                                <td>{{$product->id}}</td>
-                                <td>{{$product->product_name}}</td>
-                                <td>{{$product->product_brand}}</td>
-                                <td>{{$product->product_qty}}</td>
-                                <td>{{$product->product_unit}}</td>
-                                <td>{{$product->product_cost}}</td>
-                                <td>{{$product->product_image}}</td>
-                                <td>
-                                    <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary">Edit</a>
-
-                                    <form action="{{ route('products.destroy', $product->id) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <input type="submit" name="submit" value="Delete" class="btn btn-danger">
-                                    </form>
-                                 </td>
-                          </tr>
-                          @endforeach
-                        @endif
-                    </tbody>
-                </table>
-            </div>
+          @yield('product_create')
+          @yield('product_view')
         </main>
       </div>
     </div>
