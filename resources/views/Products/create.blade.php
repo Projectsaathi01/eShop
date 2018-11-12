@@ -1,4 +1,4 @@
-@extends('Products.index')
+@extends('products.index')
 @section('product_create')
     <div class="col-md-6">
     	<form method="POST" action="{{ route('products.store') }}" enctype="multipart/form-data">

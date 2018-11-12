@@ -34,9 +34,9 @@
                                 <td>{{$product->product_cost}}</td>
                                 <td>{{$product->product_image}}</td>
                                 <td>
-                                    <a href="{{ route('product.edit', $product->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('products.edit', $product->id) }}" class="btn btn-primary">Edit</a>
 
-                                    <form action="{{ route('product.destroy', $product->id) }}" method="POST">
+                                    <form action="{{ route('products.destroy', $product->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <input type="submit" name="submit" value="Delete" class="btn btn-danger">
