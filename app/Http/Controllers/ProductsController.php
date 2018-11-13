@@ -48,12 +48,16 @@ class ProductsController extends Controller
         $product = new Product;
         $product->product_name = $request->product_name;
         $product->product_brand = $request->product_brand;
+        $product->product_model = $request->product_model;
         $product->product_qty = $request->product_qty;
         $product->product_unit = $request->product_unit;
         $product->product_cost = $request->product_cost;
+        $product->product_size = $request->product_size;
+        $product->product_color = $request->product_color;
         $product->product_image = $request->product_image;
         $product->save();
-        return view('products.index');
+        return redirect()->route('products.index');
+
     }
 
     /**
@@ -91,9 +95,12 @@ class ProductsController extends Controller
         $product = Product::find($id);
         $product->product_name = $request->product_name;
         $product->product_brand = $request->product_brand;
+        $product->product_model = $request->product_model;
         $product->product_qty = $request->product_qty;
         $product->product_unit = $request->product_unit;
         $product->product_cost = $request->product_cost;
+        $product->product_size = $request->product_size;
+        $product->product_color = $request->product_color;
         $product->product_image = $request->product_image;
         $product->save();
         return redirect()->route('products.index');

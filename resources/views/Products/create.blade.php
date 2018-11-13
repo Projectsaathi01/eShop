@@ -9,6 +9,9 @@
     		<div class="form-group">
     			<input type="text" name="product_brand" placeholder="Product Brand" class="form-control">
     		</div>
+            <div class="form-group">
+                <input type="text" name="product_model" placeholder="Product Model" class="form-control">
+            </div>
     		<div class="form-group">
     			<input type="number" name="product_qty" placeholder="Product Quantity" class="form-control">
     		</div>
@@ -18,6 +21,12 @@
     		<div class="form-group">
     			<input type="number" step=".01" name="product_cost" placeholder="Product Unit Cost" class="form-control">
     		</div>
+            <div class="form-group">
+                <input type="text" name="product_size" placeholder="Product Size" class="form-control">
+            </div>
+            <div class="form-group">
+                <input type="text" name="product_color" placeholder="Product Color" class="form-control">
+            </div>
 			<div class="form-group">
 				<label for="imageInput">Product's Image</label>
 				<input data-preview="#preview" type="file" name="product_image">

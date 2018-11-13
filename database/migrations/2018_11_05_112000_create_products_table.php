@@ -17,9 +17,12 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('product_name');
             $table->string('product_brand');
+            $table->string('product_model');
             $table->integer('product_qty');
             $table->string('product_unit');
             $table->float('product_cost');
+            $table->string('product_size');
+            $table->string('product_color');
             $table->string('product_image');
             $table->timestamps();
         });

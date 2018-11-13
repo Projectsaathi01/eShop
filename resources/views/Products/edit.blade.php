@@ -21,6 +21,9 @@
     		        	<input type="text" name="product_brand" placeholder="Product Brand" class="form-control" value="{{ $product->product_brand }}">
     		        </div>
     		        <div class="form-group">
+    		        	<input type="text" name="product_model" value="{{ $product->product_model }}" class="form-control">
+    		        </div>
+    		        <div class="form-group">
     		        	<input type="number" name="product_qty" placeholder="Product Quantity" class="form-control" value="{{ $product->product_qty }}">
     		        </div>
     	        	<div class="form-group">
@@ -28,6 +31,12 @@
     	        	</div>
     	        	<div class="form-group">
     		        	<input type="number" step=".01" name="product_cost" placeholder="Product Unit Cost" class="form-control" value="{{ $product->product_cost }}">
+    		        </div>
+    		        <div class="form-group">
+    		        	<input type="text" name="product_size" value="{{ $product->product_size }}" class="form-control">
+    		        </div>
+    		        <div class="form-group">
+    		        	<input type="text" name="product_color" value="{{ $product->product_color }}" class="form-control">
     		        </div>
 			        <div class="form-group">
 			        	<label for="imageInput" >Product's Image</label>
