@@ -1,10 +1,7 @@
 @extends('admin.dashboard')
 @section('content')
 	<div class="col-md-12">
-		<form action="{{route('admin.category.create')}}" method="POST">
-			<input type="submit" name="categories" class="btn-btn-primary" value="Add Category">
-		</form>
-		<h2>Categories List</h2>
+		<a href="{{ route('admin.category.create') }}" class="btn btn-primary">Add Category</a>
 		
 	</div>
 @endsection
