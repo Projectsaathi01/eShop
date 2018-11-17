@@ -39,7 +39,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Route for admin
 Route::group(['as'=>'admin.', 'middleware'=>['auth','admin'], 'prefix'=>'admin'], function(){
-	Route::get('/dashboard', 'AdminController@index')->name('index');
+	Route::get('dashboard', 'AdminController@index')->name('index');
 	Route::resource('product', 'ProductController');
 	Route::resource('category', 'CategoryController');	
 });

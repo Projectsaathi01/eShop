@@ -49,7 +49,7 @@ class LoginController extends Controller
     {
         if($user->role->name == 'admin')
         {
-            $this->redirectTo = '/admin';
+            $this->redirectTo = '/admin/dashboard';
         }
     }
 }

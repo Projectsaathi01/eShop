@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Middleware;
-
+ 
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +19,7 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             if(Auth::user()->role->name == 'admin')
-            return redirect('/admin');
+            return redirect('/admin/dashboard');
         else
             return redirect('/home');
         }
