@@ -6,7 +6,7 @@
 			<div class="col-sm-12">
 				<label class="form-control-label">Title:</label>
 				<input type="text" id="txturl" name="title" class="form-control">
-				<p class="small">{{config('app.url')}}<span id="url"></span></p>
+				<p class="small"><!-- {{config('app.url')}} --><span id="url"></span></p>
 				<input type="hidden" name="slug" id="slug" value="">
 			</div>
 		</div>
